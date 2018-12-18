@@ -10,11 +10,11 @@ mkdir cmake_binary
 cd cmake_binary
 
 echo ---------------------------------------------------------------------------------
-mkdir vs2013
-cd vs2013
-REM cmake -G "Visual Studio 12 2013 Win64" --build ../../..
-REM cmake -G "Visual Studio 12 2013" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --build ../../..
-cmake -G "Visual Studio 12 2013" --build ../../..
+mkdir vs2017
+cd vs2017
+REM cmake -G "Visual Studio 15 2017 Win64" --build ../../..
+REM cmake -G "Visual Studio 15 2017" -DBEHAVIAC_VERSION_MODE=ForeUseRelease --build ../../..
+cmake -G "Visual Studio 15 2017" --build ../../..
 cd ..
 
 REM echo ---------------------------------------------------------------------------------

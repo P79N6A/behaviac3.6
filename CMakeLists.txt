@@ -272,7 +272,7 @@ if(MSVC OR BEHAVIAC_ANDROID_ON)
 	# else()
 		# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
 	# endif()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W3")
 	
 	#warning treated as error
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX")

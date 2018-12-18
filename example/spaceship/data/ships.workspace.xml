@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="ships" folder="bt\behaviors" export="bt\exported" language="cpp" version="3">
+  <export>
+    <cs>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../../example/spaceship/data/bt/exported</folder>
+    </cs>
+    <cpp>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../..</folder>
+    </cpp>
+    <bson>
+      <isexported>True</isexported>
+    </bson>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+  </export>
+</workspace>

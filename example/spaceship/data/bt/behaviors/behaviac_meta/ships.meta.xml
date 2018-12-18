@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<meta>
+  <types>
+    <enumtype Type="behaviac::EBTStatus" Namespace="behaviac" IsImplemented="true" DisplayName="BT状态" Desc="BT状态">
+      <enum NativeValue="behaviac::BT_INVALID" Value="BT_INVALID" DisplayName="BT_INVALID" Desc="" MemberValue="-1" />
+      <enum NativeValue="behaviac::BT_SUCCESS" Value="BT_SUCCESS" DisplayName="BT_SUCCESS" Desc="" MemberValue="-1" />
+      <enum NativeValue="behaviac::BT_FAILURE" Value="BT_FAILURE" DisplayName="BT_FAILURE" Desc="" MemberValue="-1" />
+      <enum NativeValue="behaviac::BT_RUNNING" Value="BT_RUNNING" DisplayName="BT_RUNNING" Desc="" MemberValue="-1" />
+    </enumtype>
+    <enumtype Type="ETest" Namespace="" DisplayName="ETest" Desc="">
+      <enum NativeValue="EA" Value="EA" DisplayName="EA" Desc="" MemberValue="-1" />
+      <enum NativeValue="EB" Value="EB" DisplayName="EB" Desc="" MemberValue="-1" />
+      <enum NativeValue="EC" Value="EC" DisplayName="EC" Desc="" MemberValue="-1" />
+    </enumtype>
+    <struct Type="IList" Namespace="" Base="" IsImplemented="true" DisplayName="IList" Desc="" />
+    <struct Type="System::Object" Namespace="System" Base="" IsImplemented="true" DisplayName="Object" Desc="" />
+    <struct Type="StructTest" Namespace="" Base="" DisplayName="StructTest" Desc="">
+      <Member Name="a" DisplayName="a" Desc="a" Type="bool" TypeFullName="System.Boolean" Class="StructTest" Public="true" />
+    </struct>
+  </types>
+  <agents>
+    <agent classfullname="behaviac::Agent" DisplayName="behaviac::Agent" Desc="behaviac::Agent" IsRefType="true" IsImplemented="true">
+      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
+      </Method>
+    </agent>
+    <agent classfullname="framework::GameObject" base="behaviac::Agent" DisplayName="framework::GameObject" Desc="framework::GameObject" IsRefType="true">
+      <Member Name="HP" DisplayName="HP" Desc="HP" Class="framework::GameObject" Type="uint" TypeFullName="System.UInt32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="age" DisplayName="age" Desc="age" Class="framework::GameObject" Type="long" TypeFullName="System.Int64" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Method Name="GoStraight" DisplayName="GoStraight" Desc="GoStraight" Class="framework::GameObject" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="speed" Desc="speed" />
+      </Method>
+      <Method Name="TurnTowardsTarget" DisplayName="TurnTowardsTarget" Desc="TurnTowardsTarget" Class="framework::GameObject" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="turnSpeed" Desc="turnSpeed" />
+      </Method>
+      <Method Name="alignedWithPlayer" DisplayName="alignedWithPlayer" Desc="alignedWithPlayer" Class="framework::GameObject" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
+      <Method Name="playerIsAligned" DisplayName="playerIsAligned" Desc="playerIsAligned" Class="framework::GameObject" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
+      <Method Name="projectileNearby" DisplayName="projectileNearby" Desc="projectileNearby" Class="framework::GameObject" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="radius" Desc="radius" />
+      </Method>
+      <Method Name="distanceToPlayer" DisplayName="distanceToPlayer" Desc="distanceToPlayer" Class="framework::GameObject" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="false" istask="false" />
+    </agent>
+    <agent classfullname="framework::Projectile" base="framework::GameObject" DisplayName="framework::Projectile" Desc="framework::Projectile" IsRefType="true" />
+    <agent classfullname="framework::Ship" base="framework::GameObject" DisplayName="framework::Ship" Desc="framework::Ship" IsRefType="true">
+      <Method Name="checkresult" DisplayName="checkresult" Desc="checkresult" Class="framework::Ship" ReturnType="behaviac::EBTStatus" ReturnTypeFullName="XMLPluginBehaviac.behaviac_EBTStatus" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="bool" TypeFullName="System.Boolean" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="Fire" DisplayName="Fire" Desc="Fire" Class="framework::Ship" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
+      <Method Name="GotoPoint" DisplayName="GotoPoint" Desc="GotoPoint" Class="framework::Ship" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="x" Desc="x" />
+        <Param Name="param1" Type="float" TypeFullName="System.Single" DisplayName="y" Desc="y" />
+        <Param Name="param2" Type="float" TypeFullName="System.Single" DisplayName="speed" Desc="speed" />
+      </Method>
+      <Method Name="GotoPointRelative" DisplayName="GotoPointRelative" Desc="GotoPointRelative" Class="framework::Ship" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="x" Desc="x" />
+        <Param Name="param1" Type="float" TypeFullName="System.Single" DisplayName="y" Desc="y" />
+        <Param Name="param2" Type="float" TypeFullName="System.Single" DisplayName="time" Desc="time" />
+      </Method>
+      <Method Name="DestroyAllNearbyProjectiles" DisplayName="DestroyAllNearbyProjectiles" Desc="DestroyAllNearbyProjectiles" Class="framework::Ship" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="float" TypeFullName="System.Single" DisplayName="radius" Desc="radius" />
+      </Method>
+      <Method Name="getXPosition" DisplayName="getXPosition" Desc="getXPosition" Class="framework::Ship" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="false" istask="false" />
+      <Method Name="getYPosition" DisplayName="getYPosition" Desc="getYPosition" Class="framework::Ship" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="false" istask="false" />
+      <Method Name="GetConstFloatValue" DisplayName="GetConstFloatValue" Desc="GetConstFloatValue" Class="framework::Ship" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="false" istask="false" />
+      <Method Name="GetConstDoubleValue" DisplayName="GetConstDoubleValue" Desc="GetConstDoubleValue" Class="framework::Ship" ReturnType="double" ReturnTypeFullName="System.Double" Static="false" Public="false" istask="false" />
+    </agent>
+    <agent classfullname="framework::WorldState" base="behaviac::Agent" DisplayName="framework::WorldState" Desc="framework::WorldState" IsRefType="true">
+      <Member Name="time" DisplayName="time" Desc="time" Class="framework::WorldState" Type="uint" TypeFullName="System.UInt32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="HealthHP" DisplayName="HealthHP" Desc="HealthHP" Class="framework::WorldState" Type="uint" TypeFullName="System.UInt32" defaultvalue="0" Static="false" Public="false" Readonly="false" />
+      <Member Name="SyncSignal" DisplayName="SyncSignal" Desc="SyncSignal" Class="framework::WorldState" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="false" Readonly="false" />
+      <Method Name="NextWave" DisplayName="NextWave" Desc="NextWave" Class="framework::WorldState" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false" />
+      <Method Name="PlayerHP" DisplayName="PlayerHP" Desc="PlayerHP" Class="framework::WorldState" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false" />
+      <Method Name="SpawnShip" DisplayName="SpawnShip" Desc="SpawnShip" Class="framework::WorldState" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="param0" Type="int" TypeFullName="System.Int32" DisplayName="level" Desc="level" />
+      </Method>
+    </agent>
+  </agents>
+  <instances>
+    <instance name="framework::WorldState" class="framework::WorldState" DisplayName="framework::WorldState" Desc="framework::WorldState" />
+  </instances>
+</meta>

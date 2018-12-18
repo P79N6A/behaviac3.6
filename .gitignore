@@ -1,0 +1,8 @@
+bin/
+build/cmake_binary/
+.vs/
+*.lock
+*.pdb
+obj/
+*/designer/out/*
+libbehaviac_*

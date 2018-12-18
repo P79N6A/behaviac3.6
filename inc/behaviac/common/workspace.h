@@ -123,7 +123,7 @@ namespace behaviac {
 
         enum BEHAVIAC_API EFileFormat {
             EFF_xml = 1,								//specify to use xml only
-            EFF_bson = 2,								//specify to use bson only
+            EFF_bson = 2,							//specify to use bson only
             EFF_cpp = 4,								//specify to use cpp only
             EFF_default = EFF_xml | EFF_bson | EFF_cpp	//first try to use xml, if xml file doesn't exist, it tries the bson, then tries cpp
         };

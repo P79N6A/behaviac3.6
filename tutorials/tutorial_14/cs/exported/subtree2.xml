@@ -16,13 +16,13 @@
       <property Opl="int Self.FirstAgent::p1" />
       <property Opr="const int 1" />
     </node>
+    <node class="Action" id="2">
+      <property Method="Self.FirstAgent::m1(&quot;Hello, subtree2!aa&quot;)" />
+      <property ResultOption="BT_SUCCESS" />
+    </node>
     <node class="End" id="3">
       <property EndOutside="true" />
       <property EndStatus="const behaviac::EBTStatus BT_FAILURE" />
-    </node>
-    <node class="Action" id="2">
-      <property Method="Self.FirstAgent::m1(&quot;Hello, subtree2!&quot;)" />
-      <property ResultOption="BT_SUCCESS" />
     </node>
   </node>
 </behavior>
